@@ -1,0 +1,42 @@
+[{
+    "name": "E,commerce Product Page",
+    "image": "../assets/projects/ecomPageChallenge.png",
+    "describe": "E,commerce Page, with frontend mentor challenge I used HTML & CSS & JavaScript.",
+    "viewPage":"https://qouaynt.github.io/E-commerce-product-page-Challenge-KD/",
+    "codePage":"https://github.com/qouaynt/E-commerce-product-page-Challenge-KD"
+},
+{
+    "name": "Tong Template",
+    "image": "../assets/projects/TongTem.png",
+    "describe": "without any css frameworks, I used for this Template HTML & CSS & JavaScript.",
+    "viewPage":"https://qouaynt.github.io/TONG-template/",
+    "codePage":"https://github.com/qouaynt/TONG-template"
+},
+{
+    "name": "Simple Weather App F1",
+    "image": "../assets/projects/weatherImg.png",
+    "describe": "this is Weather from rest Api using HTML & CSS & JavaScript.",
+    "viewPage":"https://qouaynt.github.io/SimpleWeather/",
+    "codePage":"https://github.com/qouaynt/SimpleWeather"
+},
+{
+    "name": "Rest Countries Mentor",
+    "image": "../assets/projects/restCountries.png",
+    "describe": "this is an app show all countries with search and filtering from rest Api using HTML & CSS & JavaScript & VueJs.",
+    "viewPage":"",
+    "codePage":"https://github.com/qouaynt/api-countries"
+},
+{
+    "name": "Quiz App QACS",
+    "image": "../assets/projects/QACS.png",
+    "describe": "this is an app for simple quiz for each tool and language programming",
+    "viewPage":"https://qouaynt.github.io/Quiz-APP-QACS/",
+    "codePage":"https://github.com/qouaynt/Quiz-APP-QACS"
+},
+{
+    "name": "Video Template Page Youtube",
+    "image": "../assets/projects/undifBack.png",
+    "describe": "a simple template of videos for youtube",
+    "viewPage":"https://qouaynt.github.io/Quiz-APP-QACS/",
+    "codePage":"https://github.com/qouaynt/show-video-template-of-youtube"
+}]
