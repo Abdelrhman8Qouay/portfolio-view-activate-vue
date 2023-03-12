@@ -1,47 +1,106 @@
 <template>
   <!-- Start Contact Touch -->
   <div class="contactTouch">
-    <div class="container">
-      <h2 id="GetTo">
-        <ion-icon name="radio"></ion-icon> Get In <span>Touch</span>
-      </h2>
+    <v-container>
+      <div class="pa-2" :class="themeColor.bg_main_darken">
+        <h1
+          class="border-double px-4 py-1 text-center w-25"
+          :class="themeColor.white_color"
+        >
+          Get In <span :class="themeColor.spe_color_alot">Touch</span>
+        </h1>
+      </div>
       <div class="contentTouch">
         <form
-          class="contactBox"
+          class="contactBox d-flex align-start flex-column rounded pa-10"
+          :class="themeColor.bg_main_darken"
+          style="gap: 1rem; max-width: 450px"
           action="https://formspree.io/f/xwkjpygk"
           method="POST"
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          <div class="inputBox">
-            <input type="text" name="name" required />
-            <span><ion-icon name="person"></ion-icon> Name</span>
-          </div>
-          <div class="inputBox">
-            <input type="email" name="email" required />
-            <span><ion-icon name="mail"></ion-icon> Email</span>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="phone" required />
-            <span><ion-icon name="call"></ion-icon> Phone</span>
-          </div>
-          <div class="inputBox">
-            <textarea name="message" cols="30" rows="10" required></textarea>
-            <span><ion-icon name="chatbubble"></ion-icon> Message</span>
-          </div>
-          <input type="submit" name="send" id="subCont" value="Send Now" />
+          <v-text-field
+            color="cyan-lighten-1"
+            type="text"
+            clearable
+            label="Name"
+            name="name"
+            prepend-inner-icon="fas fa-user"
+            required
+          ></v-text-field>
+          <v-text-field
+            color="cyan-lighten-1"
+            prepend-inner-icon="fas fa-envelope"
+            type="email"
+            clearable
+            label="Email"
+            name="email"
+            required
+          ></v-text-field>
+          <v-text-field
+            color="cyan-lighten-1"
+            prepend-inner-icon="fas fa-phone"
+            type="text"
+            clearable
+            label="Phone"
+            name="phone"
+          ></v-text-field>
+          <v-textarea
+            color="cyan-lighten-1"
+            name="message"
+            rows="6"
+            clearable
+            label="Message"
+            prepend-inner-icon="fas fa-message"
+          ></v-textarea>
+          <v-card-action>
+            <v-btn
+              color="primary"
+              class="me-4"
+              type="submit"
+              name="send"
+              @click="sendingSound.play()"
+            >
+              send now
+            </v-btn>
+          </v-card-action>
         </form>
       </div>
-    </div>
+    </v-container>
   </div>
   <!-- End Contact Touch  -->
 </template>
+
+<script setup>
+import { ref } from "vue";
+
+const themeColor = ref({
+  bg_main_light: "bg-blue-grey-darken-1",
+  bg_main: "bg-blue-grey-darken-3",
+  bg_main_darken: "bg-blue-grey-darken-4",
+
+  bg_spe_color: "bg-cyan-lighten-1",
+
+  bg_black_color: "bg-black",
+  black_color: "text-black",
+
+  spe_color: "text-cyan-lighten-1",
+  spe_color_alot: "text-success",
+  white_color: "text-white",
+});
+
+// add the audio for any where in the page'
+var sendingSound = new Audio("../../src/assets/audios/notificationSending.mp3");
+</script>
 
 <style lang="scss" scoped>
 /* Start Contact Touch */
 .contactTouch {
   background: url(https://64.media.tumblr.com/75ee871c3c70501014511f527b342213/74bb6bc1ad2987d5-a1/s1280x1920/ae89e529ec10b97daff14c6aa3db56e663fbe416.gifv);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 400px;
   padding: 1rem;
@@ -57,71 +116,15 @@
   padding: 10px;
 }
 
-.contactTouch .contentTouch .contactBox {
-  padding: 2rem;
-  background-color: var(--body);
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 450px;
-  border-radius: 5px;
-}
-.contactTouch .contentTouch .contactBox .inputBox {
-  width: 100%;
-  position: relative;
-}
-.contactTouch .contentTouch .contactBox .inputBox input,
-.contactTouch .contentTouch .contactBox .inputBox textarea {
-  width: 100%;
-  outline: none;
-  padding: 10px;
-  border: 1px solid rgb(53, 53, 53);
-  background: var(--body);
-  border-radius: 5px;
-  color: var(--for-word);
-  font-size: 1em;
-  transition: 0.4s;
-}
-.contactTouch .contentTouch .contactBox .inputBox span {
-  position: absolute;
-  left: 0;
-  pointer-events: none;
-  padding: 10px;
-  color: var(--for-word);
-  font-size: 1em;
-  text-transform: uppercase;
-  transition: 0.4s;
-}
-.contactTouch .contentTouch .contactBox .inputBox input:focus ~ span,
-.contactTouch .contentTouch .contactBox .inputBox input:valid ~ span,
-.contactTouch .contentTouch .contactBox .inputBox textarea:valid ~ span,
-.contactTouch .contentTouch .contactBox .inputBox textarea:focus ~ span {
-  color: var(--for-addition);
-  transform: translateX(10px) translateY(-7px);
-  font-size: 0.65em;
-  padding: 0 10px;
-  background: var(--body);
-  letter-spacing: 0.2em;
-  border-radius: 5px;
-}
-.contactTouch .contentTouch .contactBox .inputBox input:focus,
-.contactTouch .contentTouch .contactBox .inputBox textarea:focus {
-  border: 1px solid var(--for-addition);
-}
-
-.contactTouch .contentTouch .contactBox #subCont {
-  outline: none;
-  padding: 8px 15px;
-  background: var(--for-addition);
-  color: var(--for-word);
-  transition: 0.4s;
-  border: none;
-  border-radius: 5px;
-}
-.contactTouch .contentTouch .contactBox #subCont:hover {
-  background: var(--for-word);
-  color: var(--for-addition);
+.contactTouch .contentTouch {
+  form {
+    .v-text-field {
+      width: 100%;
+    }
+    .v-textarea-field {
+      width: 100%;
+    }
+  }
 }
 /* End Contact Touch */
 </style>

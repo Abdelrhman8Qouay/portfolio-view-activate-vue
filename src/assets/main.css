@@ -20,7 +20,9 @@ body {
 }
 
 :root {
-  --active-color: #546e7a;
+  --active-color: #527da8;
+  --smooth-bg: rgba(40, 40, 40, 0.437);
+  --spe-color: #26c6da;
 }
 
 

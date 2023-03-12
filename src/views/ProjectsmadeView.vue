@@ -3,7 +3,10 @@
 
   <div class="projectsCap mb-6">
     <!-- Title Row -->
-    <div class="d-flex flex-md-row flex-sm-column justify-space-between">
+    <div
+      class="d-flex flex-md-row flex-sm-column justify-space-between pa-2"
+      :class="themeColor.bg_main_darken"
+    >
       <a
         class="btnRepo px-4 py-1 border-double"
         href="https://github.com/Abdelrhman8Qouay?tab=repositories"
@@ -27,7 +30,9 @@
         v-for="(content, i) in contentProjects"
         class="contentTable my-4"
       >
-        <div class="mainTit">{{ content.title }}</div>
+        <div class="mainTit" :class="themeColor.white_color">
+          {{ content.title }}
+        </div>
         <div class="pros">
           <div
             class="proBox text-white"
@@ -36,23 +41,44 @@
             data-aos="fade-down"
             data-aos-duration="2000"
           >
+            <div
+              v-if="project.info != ''"
+              :class="badgeBackgroundColors[project.info]"
+              class="badge_card text-red pa-2 position-absolute rounded"
+              style="z-index: 18; position: relative; top: 5%; left: 5%"
+            >
+              {{ project.info }}
+            </div>
             <div class="mainCard">
               <div class="imgProB">
-                <img :src="project.image" :alt="'project ' + k" />
+                <img
+                  :src="
+                    project.image == ''
+                      ? '../../src/assets/projects/undifBack.png'
+                      : project.image
+                  "
+                  :alt="'project ' + k"
+                />
               </div>
             </div>
-            <div class="bodyCard">
-              <div class="title">{{ project.name }}</div>
-              <p>
-                {{ project.describe }}
-              </p>
-              <div class="btnsCard">
-                <a :href="project.viewPage"
-                  ><v-icon class="me-2" size="20">fas fa-eye</v-icon> View</a
-                >
-                <a :href="project.codePage"
-                  ><v-icon class="me-2" size="20">fas fa-code</v-icon> Code</a
-                >
+            <div class="bodyCard" :class="themeColor.bg_main_light">
+              <div class="title text-white" :class="themeColor.bg_main_darken">
+                {{ project.name }}
+              </div>
+              <div
+                class="action_carding d-flex flex-column h-75 justify-space-between"
+              >
+                <p class="overflow-auto h-100" :class="themeColor.spe_color">
+                  {{ project.describe }}
+                </p>
+                <div class="btnsCard">
+                  <a :href="project.viewPage"
+                    ><v-icon class="me-2" size="20">fas fa-eye</v-icon> View</a
+                  >
+                  <a :href="project.codePage"
+                    ><v-icon class="me-2" size="20">fas fa-code</v-icon> Code</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -70,9 +96,23 @@ import dataProjectsFront from "../data/dataProjectsFront.json";
 import dataProjectsFull from "../data/dataProjectsFull.json";
 import { ref } from "vue";
 
+// Variables Option
+const onboarding = ref(false);
+const badgeBackgroundColors = ref({
+  pending: "bg-warning",
+  completed: "bg-success",
+  updated: "bg-primary",
+});
+
 const contentProjects = ref([
   { content: dataProjectsFront, title: "Front End" },
   { content: dataProjectsFull, title: "Full Stack" },
+]);
+
+const contentRecommended = ref([
+  dataProjectsFront[2],
+  dataProjectsFront[3],
+  dataProjectsFront[4],
 ]);
 
 const themeColor = ref({
@@ -89,19 +129,6 @@ const themeColor = ref({
   spe_color_alot: "text-indigo",
   white_color: "text-white",
 });
-
-// Get Icons To Put It On { library } to get from it the icons
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faPaperPlane,
-  faPanorama,
-  faEye,
-  faCode,
-} from "@fortawesome/free-solid-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-
-library.add([faPaperPlane, faPanorama, faEye, faCode]);
-library.add([faFacebook]);
 </script>
 
 <style lang="scss" scoped>
@@ -142,24 +169,15 @@ library.add([faFacebook]);
     gap: 10px;
 
     .contentTable {
-      background: rgba(40, 40, 40, 0.437);
+      background: var(--smooth-bg);
       padding: 5px;
       .mainTit {
         font-size: 1.9rem;
-        color: #fff;
         font-weight: bold;
         text-align: center;
         position: relative;
         letter-spacing: 0.3rem;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          background: red;
-          bottom: -3px;
-          left: 0;
-        }
+        text-decoration: underline;
       }
       .pros {
         display: flex;
@@ -171,6 +189,7 @@ library.add([faFacebook]);
           position: relative;
           flex: 1 0 400px;
           max-width: 400px;
+          max-height: 200px;
           overflow: hidden;
           border-radius: 5px;
 
@@ -199,19 +218,15 @@ library.add([faFacebook]);
             top: 75%;
             width: 100%;
             height: 100%;
-            background-color: var(--body);
             z-index: 20;
-            color: var(--for-word);
             .title {
               padding: 1rem;
               background-color: #222222;
-              color: var(--for-addition);
               text-align: start;
             }
 
             p {
               padding: 1rem;
-              color: var(--for-word);
               text-align: start;
             }
 
@@ -221,21 +236,13 @@ library.add([faFacebook]);
               justify-content: space-between;
               a {
                 text-decoration: none;
-                color: var(--for-word);
-                background-color: var(--for-addition);
+                color: #fff;
                 padding: 7px 15px;
                 display: flex;
                 align-items: center;
                 transition: 0.4s;
-
                 &:hover {
-                  color: var(--for-addition);
-                  background-color: var(--for-word);
-                }
-
-                ion-icon {
-                  margin-right: 10px;
-                  font-size: inherit;
+                  color: var(--active-color);
                 }
               }
             }

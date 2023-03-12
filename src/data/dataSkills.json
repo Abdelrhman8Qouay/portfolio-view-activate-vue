@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Bootstrap5",
+        "image": "../../src/assets/Icons/bootstrap-5-logo-icon.png",
+        "describe": "Bootstrap: my favorite framework with css"
+    },
+    {
+        "name": "HTML5",
+        "image": "../../src/assets/Icons/html-icon.png",
+        "describe": "HTML:"
+    },
+    {
+        "name": "CSS3",
+        "image": "../../src/assets/Icons/css-icon.png",
+        "describe": "CSS:"
+    },
+    {
+        "name": "VueJS",
+        "image": "../../src/assets/Icons/vue-js-icon.png",
+        "describe": "VueJs: with version 2 or 3 - Now (composition api)"
+    },
+    {
+        "name": "JavaScript",
+        "image": "../../src/assets/Icons/javascript-programming-language-icon.png",
+        "describe": "JavaScript: your page dancing 😂"
+    },
+    {
+        "name": "MySql",
+        "image": "../../src/assets/Icons/mysql-icon.png",
+        "describe": "MySql:"
+    },
+    {
+        "name": "Php",
+        "image": "../../src/assets/Icons/php-programming-language-icon.png",
+        "describe": "PHP:"
+    },
+    {
+        "name": "GitHup",
+        "image": "../../src/assets/Icons/github-icon.png",
+        "describe": "GitHup: I need a little more digging but the basic work is excellent don't worry 😂"
+    },
+    {
+        "name": "Git VCS",
+        "image": "../../src/assets/Icons/git-icon.png",
+        "describe": "Git: I was very close to getting a mastery badge but unfortunately next time"
+    },
+    {
+        "name": "Sass",
+        "image": "../../src/assets/Icons/sass-icon.png",
+        "describe": "Sass: A little dealing and patience with a master"
+    },
+    {
+        "name": "Wordpress",
+        "image": "../../src/assets/Icons/wordpress-icon.png",
+        "describe": "Wordpress: One or more pages, but do not worry, mastering it is simple with another project. Try and you will see, but make sure that you are on your simple path"
+    },
+    {
+        "name": "GulpJs",
+        "image": "../../src/assets/Icons/gulp-js-icon.png",
+        "describe": "GulpJs:"
+    },
+    {
+        "name": "TypeScript",
+        "image": "../../src/assets/Icons/typescript-programming-language-icon.png",
+        "describe": "TypeScript: A little dealing and patience with a master"
+    },
+    {
+        "name": "Pinia",
+        "image": "../../src/assets/Icons/Pinia-img.svg",
+        "describe": "Pinia:"
+    },
+    {
+        "name": "Vuetify",
+        "image": "../../src/assets/Icons/vuetify-logo-v3-dark.svg",
+        "describe": "Vuetify:"
+    },
+    {
+        "name": "ViteJs",
+        "image": "../../src/assets/Icons/viteJs-image.png",
+        "describe": "ViteJs:"
+    },
+    {
+        "name": "PugJs",
+        "image": "../../src/assets/Icons/pugjs_logo_icon_170825.svg",
+        "describe": "PugJs:"
+    },
+    {
+        "name": "NuxtJs",
+        "image": "../../src/assets/Icons/nuxt-js-icon.png",
+        "describe": "NuxtJs: A little dealing and patience with a master"
+    },
+    {
+        "name": "Json",
+        "image": "../../src/assets/Icons/json160-min.gif",
+        "describe": "Json:"
+    },
+    {
+        "name": "C++",
+        "image": "../../src/assets/Icons/c-plus-plus-programming-language-icon.png",
+        "describe": "C++: Not Good but i do not need except the old syntax"
+    },
+    {
+        "name": "Python",
+        "image": "../../src/assets/Icons/python-programming-language-icon.png",
+        "describe": "Python: get professional for the rest of life"
+    }
+]

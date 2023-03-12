@@ -1,12 +1,18 @@
 
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer color="success" expand-on-hover rail v-model="drawer">
+    <v-navigation-drawer
+      style="background: linear-gradient(45deg, #41464b, #b41699, #ffdf4a)"
+      expand-on-hover
+      rail
+      v-model="drawer"
+    >
       <v-list>
         <v-list-item
           prepend-avatar="../src/assets/bussinLogo.png"
           title="Abdelrhman Ashraf"
           subtitle="qouay555@gmail.com"
+          href="https://www.facebook.com/profile.php?id=100090009622327"
         ></v-list-item>
       </v-list>
 
@@ -15,6 +21,7 @@
       <v-list density="compact" nav>
         <v-list-item
           prepend-icon="fas fa-user-secret"
+          color="primary"
           title="Landing Pro"
           value="landing"
           to="/"
@@ -23,30 +30,42 @@
           prepend-icon="fas fa-project-diagram"
           title="Projects Made"
           value="projects"
+          color="primary"
           to="projects"
         ></v-list-item>
         <v-list-item
           prepend-icon="fas fa-paper-plane"
           title="Get In Touch"
+          color="primary"
           value="callme"
           to="getintouch"
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar>
+    <v-app-bar :class="themeColor.bg_main_light">
       <v-app-bar-nav-icon
         color="success"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title :class="themeColor.spe_color"
+        >AbdelrhmanQouay's
+        <span :class="themeColor.spe_color_alot"
+          >Portfolio</span
+        ></v-toolbar-title
+      >
     </v-app-bar>
 
     <v-main>
       <RouterView />
     </v-main>
 
+    <div class="windowContent">
+      <div class="upCon"></div>
+      <div class="imging"></div>
+      <div class="downCon"></div>
+    </div>
     <v-footer
       class="flex-column"
       :class="themeColor.bg_main_light + ' ' + themeColor.white_color"
@@ -109,11 +128,12 @@
       <div class="text-center w-100 px-5 py-5" :class="themeColor.bg_main">
         Designed With 💖 By
         <a
-          href="#"
+          href="https://www.facebook.com/profile.php?id=100090009622327"
           class="text-decoration-none"
           :class="themeColor.spe_color_alot"
           >Abdelrhman Ashraf</a
         >
+        | all rights reserved © {{ new Date().getFullYear() }}
       </div>
       <!-- Copyright -->
     </v-footer>
@@ -157,6 +177,12 @@ const itemsQuick = ref([
   },
 ]);
 
+// add the audio for any where in the page'
+const onlineSound = new Audio("../../src/assets/audios/notification1.mp3");
+window.ononline = () => {
+  onlineSound.play();
+};
+
 // To Add Icons On This Page >>>>>
 // this is must have
 // Get Icons To Put It On { library } to get from it the icons
@@ -169,6 +195,18 @@ import {
   faEnvelope,
   faMapLocationDot,
   faArrowRightToBracket,
+  faPanorama,
+  faEye,
+  faCode,
+  faUser,
+  faMessage,
+  faDownload,
+  faXmark,
+  faEarthAfrica,
+  faGraduationCap,
+  faToolbox,
+  faAnchor,
+  faPersonWalkingLuggage,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -185,91 +223,43 @@ library.add([
   faEnvelope,
   faMapLocationDot,
   faArrowRightToBracket,
+  faPanorama,
+  faEye,
+  faCode,
+  faUser,
+  faMessage,
+  faDownload,
+  faXmark,
+  faEarthAfrica,
+  faGraduationCap,
+  faToolbox,
+  faAnchor,
+  faPersonWalkingLuggage,
 ]);
 library.add([faFacebook, faGithub, faTwitter, faLinkedin]);
 </script>
 
 
 <style lang="scss" scoped>
-/* Start Footer  */
-// .windowContent .upCon {
-//   width: 100%;
-//   min-height: 150px;
-//   background-color: #41464b;
-//   box-shadow: inset 0 0 12px;
-// }
-// .windowContent .downCon {
-//   width: 100%;
-//   min-height: 150px;
-//   background-color: #41464b;
-//   box-shadow: inset 0 0 12px;
-// }
-// .windowContent .imging {
-//   width: 100%;
-//   background: url(https://i.pinimg.com/originals/a3/c3/77/a3c3776b73f2ac4aa70ba7db2a5f66f6.gif);
-//   min-height: 100px;
-//   background-size: initial;
-//   background-position: right;
-// }
-
-// footer {
-//   width: 100%;
-//   background: #41464b;
-//   box-shadow: inset -1px -4px 10px black;
-//   color: var(--for-word);
-// }
-
-// footer .main {
-//   color: var(--for-word);
-// }
-// footer .main .rowingK .contentMain h4 {
-//   color: var(--for-spesh);
-//   text-shadow: 0 0 4px black;
-// }
-// footer .main .rowingK .contentMain h4 span {
-//   color: var(--for-addition);
-// }
-
-// footer .main .rowingK .contentQuick {
-//   color: var(--for-word);
-// }
-// footer .main .rowingK .contentQuick ul li a {
-//   color: var(--for-word);
-//   text-decoration: none;
-//   display: flex;
-//   align-items: center;
-//   margin: 10px 0;
-// }
-// footer .main .rowingK .contentQuick ul li a:hover {
-//   color: var(--for-addition);
-//   text-shadow: 0 0 12px var(--for-addition);
-// }
-// footer .main .rowingK .contentQuick ul li a ion-icon {
-//   margin-right: 10px;
-//   font-size: inherit;
-// }
-
-// footer .main .rowingK .contentConact {
-//   color: var(--for-word);
-// }
-// footer .main .rowingK .contentConact ul li a {
-//   color: var(--for-word);
-//   text-decoration: none;
-//   display: flex;
-//   align-items: center;
-//   margin: 10px 0;
-// }
-// footer .main .rowingK .contentConact ul li a ion-icon {
-//   margin-right: 10px;
-//   font-size: inherit;
-// }
-
-// footer .copyFoot {
-//   color: var(--for-word);
-// }
-// footer .copyFoot a {
-//   color: var(--for-spesh);
-// }
-
-/* End Footer   */
+// Start Window
+.windowContent .upCon {
+  width: 100%;
+  min-height: 150px;
+  background-color: #41464b;
+  box-shadow: inset 0 0 12px;
+}
+.windowContent .downCon {
+  width: 100%;
+  min-height: 150px;
+  background-color: #41464b;
+  box-shadow: inset 0 0 12px;
+}
+.windowContent .imging {
+  width: 100%;
+  background: url(https://i.pinimg.com/originals/a3/c3/77/a3c3776b73f2ac4aa70ba7db2a5f66f6.gif);
+  min-height: 100px;
+  background-size: initial;
+  background-position: right;
+}
+// End Window
 </style>
