@@ -525,7 +525,7 @@ window.onscroll = () => {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  background-position: bottom;
+  background-position: center;
   padding: 5rem;
 
   .aboutContent {
