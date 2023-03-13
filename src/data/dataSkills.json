@@ -1,7 +1,7 @@
 [
     {
         "name": "Bootstrap5",
-        "image": "../assets/Icons/bootstrap-5-logo-icon.png",
+        "image": "bootstrap-5-logo-icon.png",
         "describe": "Bootstrap: my favorite framework with css"
     },
     {
