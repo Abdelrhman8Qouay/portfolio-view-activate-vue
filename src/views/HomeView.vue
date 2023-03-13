@@ -221,7 +221,7 @@
               data-aos-duration="2000"
             >
               <div class="imgBox">
-                <img :src="skill.image" :alt="skill.name" />
+                <img :src="getImageUrl(skill.image)" :alt="skill.name" />
               </div>
               <p>{{ skill.name }}</p>
               <v-tooltip max-width="200" activator="parent" location="top">{{
@@ -434,6 +434,10 @@ window.onscroll = () => {
     }
   });
 };
+
+function getImageUrl(urlName) {
+  return new URL(urlName, import.meta.url).href;
+}
 </script>
 
 
