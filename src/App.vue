@@ -9,7 +9,7 @@
     >
       <v-list>
         <v-list-item
-          prepend-avatar="../src/assets/bussinLogo.png"
+          :prepend-avatar="getImageUrl('assets/bussinLogo.png')"
           title="Abdelrhman Ashraf"
           subtitle="qouay555@gmail.com"
           href="https://www.facebook.com/profile.php?id=100090009622327"
@@ -178,10 +178,14 @@ const itemsQuick = ref([
 ]);
 
 // add the audio for any where in the page'
-const onlineSound = new Audio("../../src/assets/audios/notification1.mp3");
+const onlineSound = new Audio(getImageUrl("assets/audios/notification1.mp3"));
 window.ononline = () => {
   onlineSound.play();
 };
+
+function getImageUrl(urlName) {
+  return new URL(`./${urlName}`, import.meta.url).href;
+}
 
 // To Add Icons On This Page >>>>>
 // this is must have

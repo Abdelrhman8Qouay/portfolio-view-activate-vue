@@ -436,7 +436,7 @@ window.onscroll = () => {
 };
 
 function getImageUrl(urlName) {
-  return new URL(`../assets/Icons/${urlName}`, import.meta.url).href;
+  return new URL(`../${urlName}`, import.meta.url).href;
 }
 </script>
 

@@ -1,7 +1,7 @@
 [
 {
     "name": "Calculator app 1",
-    "image": "../../src/assets/projects/Calculator1.png",
+    "image": "assets/projects/Calculator1.png",
     "describe": "Simple Calculator with basics, For first time, I Used HTML & CSS & JavaScript.",
     "viewPage":"https://calculator1qouay.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/calculator-app-t1",
@@ -9,7 +9,7 @@
 },
 {
     "name": "Weather App Adv",
-    "image": "../../src/assets/projects/weatherImg.png",
+    "image": "assets/projects/weatherImg.png",
     "describe": "this is Weather from rest Api instead of the old weather using HTML & CSS & JavaScript.",
     "viewPage":"https://advweatherappapi.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/adv-weather-app",
@@ -17,7 +17,7 @@
 },
 {
     "name": "Rest Countries Mentor",
-    "image": "../../src/assets/projects/restCountries.png",
+    "image": "assets/projects/restCountries.png",
     "describe": "this is an app show all countries with search and filtering from rest Api using HTML & CSS & JavaScript & VueJs (composition api) and vitejs.",
     "viewPage":"https://restcountriesapivite1.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/vite-countries-api-1",
@@ -25,7 +25,7 @@
 },
 {
     "name": "Quiz App QACS",
-    "image": "../../src/assets/projects/QACS.png",
+    "image": "assets/projects/QACS.png",
     "describe": "this is an app for simple quiz for each tool and language programming",
     "viewPage":"https://quizappqouay.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/Quiz-APP-QACS",
@@ -33,7 +33,7 @@
 },
 {
     "name": "ToDoList App",
-    "image": "../../src/assets/projects/Todolistapp1.png",
+    "image": "assets/projects/Todolistapp1.png",
     "describe": "Simple Todolist app, For first time, you can add the favorite tasks and work on it in another page alone",
     "viewPage":"https://master--todolistappwithvuetify.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/vite-todolist-with-vuetify",
@@ -41,7 +41,7 @@
 },
 {
     "name": "ChatBot ( Globot )",
-    "image": "../../src/assets/projects/Chatglobot1.png",
+    "image": "assets/projects/Chatglobot1.png",
     "describe": "Simple ChatBot with some rules, Very simple as chatbot, I Used HTML & CSS & JavaScript and json.",
     "viewPage":"https://chatglobot1qouay.netlify.app/",
     "codePage":"https://github.com/Abdelrhman8Qouay/Globot-ChatBot",
@@ -49,7 +49,7 @@
 },
 {
     "name": "E,commerce Product Page",
-    "image": "../../src/assets/projects/ecomPageChallenge.png",
+    "image": "assets/projects/ecomPageChallenge.png",
     "describe": "E,commerce Page, with frontend mentor challenge I used HTML & CSS & JavaScript.",
     "viewPage":"https://qouaynt.github.io/E-commerce-product-page-Challenge-KD/",
     "codePage":"https://github.com/qouaynt/E-commerce-product-page-Challenge-KD",
@@ -57,7 +57,7 @@
 },
 {
     "name": "Tong Template",
-    "image": "../../src/assets/projects/TongTem.png",
+    "image": "assets/projects/TongTem.png",
     "describe": "without any css frameworks, I used for this Template HTML & CSS & JavaScript.",
     "viewPage":"https://qouaynt.github.io/TONG-template/",
     "codePage":"https://github.com/qouaynt/TONG-template",

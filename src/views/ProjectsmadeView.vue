@@ -54,8 +54,8 @@
                 <img
                   :src="
                     project.image == ''
-                      ? '../../src/assets/projects/undifBack.png'
-                      : project.image
+                      ? getImageUrl('assets/projects/undifBack.png')
+                      : getImageUrl(project.image)
                   "
                   :alt="'project ' + k"
                 />
@@ -129,6 +129,10 @@ const themeColor = ref({
   spe_color_alot: "text-indigo",
   white_color: "text-white",
 });
+
+function getImageUrl(urlName) {
+  return new URL(`../${urlName}`, import.meta.url).href;
+}
 </script>
 
 <style lang="scss" scoped>

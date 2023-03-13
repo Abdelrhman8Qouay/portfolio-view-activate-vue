@@ -91,7 +91,13 @@ const themeColor = ref({
 });
 
 // add the audio for any where in the page'
-var sendingSound = new Audio("../../src/assets/audios/notificationSending.mp3");
+var sendingSound = new Audio(
+  getImageUrl("assets/audios/notificationSending.mp3")
+);
+
+function getImageUrl(urlName) {
+  return new URL(`../${urlName}`, import.meta.url).href;
+}
 </script>
 
 <style lang="scss" scoped>
