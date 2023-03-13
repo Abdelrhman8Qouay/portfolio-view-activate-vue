@@ -221,7 +221,7 @@
               data-aos-duration="2000"
             >
               <div class="imgBox">
-                <img :src="getImageUrl(skill.image)" :alt="skill.name" />
+                <img :src="skill.image" :alt="skill.name" />
               </div>
               <p>{{ skill.name }}</p>
               <v-tooltip max-width="200" activator="parent" location="top">{{
