@@ -21,7 +21,7 @@
       <v-list density="compact" nav>
         <v-list-item
           prepend-icon="fas fa-user-secret"
-          color="primary"
+          color="darken"
           title="Landing Pro"
           value="landing"
           to="/"
@@ -30,13 +30,13 @@
           prepend-icon="fas fa-project-diagram"
           title="Projects Made"
           value="projects"
-          color="primary"
+          color="darken"
           to="projects"
         ></v-list-item>
         <v-list-item
           prepend-icon="fas fa-paper-plane"
           title="Get In Touch"
-          color="primary"
+          color="darken"
           value="callme"
           to="getintouch"
         ></v-list-item>
@@ -66,6 +66,7 @@
       <div class="imging"></div>
       <div class="downCon"></div>
     </div>
+
     <v-footer
       class="flex-column"
       :class="themeColor.bg_main_light + ' ' + themeColor.white_color"
@@ -75,7 +76,7 @@
         <!--Grid row-->
         <v-row>
           <!--Grid column-->
-          <v-col cols="6" md="6" xs="12" class="mb-4 mb-md-0 contentMain">
+          <v-col cols="6" md="6" xs="12" class="mb-4 mb-md-0 listCol">
             <h4
               class="text-uppercase text-xs-h4 text-md-h3"
               :class="themeColor.spe_color_alot"
@@ -98,7 +99,7 @@
           <!--Grid column-->
 
           <!--Grid column-->
-          <v-col cols="6" md="6" xs="12" class="mb-4 mb-md-0">
+          <v-col cols="6" md="6" xs="12" class="mb-4 mb-md-0 listCol">
             <v-list class="bg-transparent" :lines="false" density="compact" nav>
               <v-list-subheader :class="themeColor.white_color"
                 >CONTACT ME</v-list-subheader
@@ -264,6 +265,24 @@ library.add([faFacebook, faGithub, faTwitter, faLinkedin]);
   min-height: 100px;
   background-size: initial;
   background-position: right;
+}
+
+@media (max-width: 680px) {
+  body .v-footer .main .v-row {
+    flex-direction: column;
+    gap: 10px;
+
+    .listCol {
+      flex: 1 0 100%;
+      max-width: 100%;
+      padding: 0;
+
+      .v-list {
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+      }
+    }
+  }
 }
 // End Window
 </style>

@@ -4,7 +4,7 @@
     <v-container>
       <div class="pa-2" :class="themeColor.bg_main_darken">
         <h1
-          class="border-double px-4 py-1 text-center w-25"
+          class="border-double px-4 py-1 text-center"
           :class="themeColor.white_color"
         >
           Get In <span :class="themeColor.spe_color_alot">Touch</span>
@@ -12,7 +12,7 @@
       </div>
       <div class="contentTouch">
         <form
-          class="contactBox d-flex align-start flex-column rounded pa-10"
+          class="contactBox d-flex align-start flex-column rounded pa-sm-3 pa-md-10"
           :class="themeColor.bg_main_darken"
           style="gap: 1rem; max-width: 450px"
           action="https://formspree.io/f/xwkjpygk"
@@ -129,6 +129,21 @@ function getImageUrl(urlName) {
     }
     .v-textarea-field {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  body .contactTouch {
+    padding: 0;
+
+    .contentTouch {
+      padding: 0;
+      margin-top: 10px;
+
+      .contactBox {
+        padding: 7px;
+      }
     }
   }
 }

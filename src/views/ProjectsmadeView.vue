@@ -4,7 +4,7 @@
   <div class="projectsCap mb-6">
     <!-- Title Row -->
     <div
-      class="d-flex flex-md-row flex-sm-column justify-space-between pa-2"
+      class="titleContent d-flex flex-md-row flex-sm-column justify-space-between pa-2"
       :class="themeColor.bg_main_darken"
     >
       <a
@@ -16,7 +16,10 @@
         />
         Show All Repos</a
       >
-      <h1 class="border-double px-4 py-1" :class="themeColor.white_color">
+      <h1
+        class="border-double px-4 py-1 text-center"
+        :class="themeColor.white_color"
+      >
         Projects Made
       </h1>
     </div>
@@ -256,6 +259,24 @@ function getImageUrl(urlName) {
     }
   }
   // Main Content
+}
+
+@media (max-width: 680px) {
+  body .projectsCap {
+    padding: 5px;
+  }
+
+  body .titleContent {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  body .projectsCap .testGrill .contentTable .pros {
+    justify-content: center;
+  }
+  body .projectsCap .testGrill .contentTable .pros .proBox {
+    flex: unset;
+  }
 }
 
 /* End Projects  */

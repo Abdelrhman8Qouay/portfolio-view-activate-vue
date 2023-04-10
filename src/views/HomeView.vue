@@ -50,12 +50,13 @@
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="d-flex justify-center">
+          <v-col class="colImg justify-center">
             <div class="contentImg">
               <img
                 src="../../src/assets/mePixelArt.jpg"
                 alt="me"
                 class="imgMain"
+                loading="lazy"
               />
             </div>
           </v-col>
@@ -143,10 +144,9 @@
       <div class="educationBox mb-3" :class="themeColor.bg_main">
         <v-container>
           <div class="my-5">
-            <div class="pa-2">
+            <div class="titleContent pa-2">
               <h1
                 class="border-double px-4 py-1 text-center"
-                style="width: max-content"
                 :class="themeColor.white_color"
               >
                 <v-icon start>fas fa-graduation-cap</v-icon> My
@@ -203,10 +203,9 @@
       <!-- Start Skills  -->
       <div class="contentTeckSkills w-100">
         <v-container class="mb-4">
-          <div class="pa-2">
+          <div class="titleContent pa-2">
             <h1
               class="border-double px-4 py-1 text-center"
-              style="width: max-content"
               :class="themeColor.white_color"
             >
               <v-icon start>fas fa-toolbox</v-icon>Technologies
@@ -231,10 +230,9 @@
           </div>
           <div class="movingSkills">
             <div class="teckSkill">
-              <div class="pa-2">
+              <div class="titleContent pa-2">
                 <h1
                   class="border-double px-4 py-1 text-center"
-                  style="width: max-content"
                   :class="themeColor.white_color"
                 >
                   <v-icon start>fas fa-anchor</v-icon> professional Skills
@@ -293,10 +291,9 @@
           </div>
           <div class="movingSkills">
             <div class="teckSkill">
-              <div class="pa-2">
+              <div class="titleContent pa-2">
                 <h1
                   class="border-double px-4 py-1 text-center"
-                  style="width: max-content"
                   :class="themeColor.white_color"
                 >
                   <v-icon start>fas fa-person-walking-luggage</v-icon>Working On
@@ -467,14 +464,17 @@ function getImageUrl(urlName) {
   .rowLanding {
     min-height: 250px;
 
-    .contentImg {
-      max-width: 290px;
-      height: 100%;
-      clip-path: polygon(15% 1%, 100% 0, 100% 100%, 30% 100%, 0 48%);
-      .imgMain {
-        width: 100%;
+    .colImg {
+      display: flex;
+      .contentImg {
+        max-width: 290px;
         height: 100%;
-        object-fit: cover;
+        clip-path: polygon(15% 1%, 100% 0, 100% 100%, 30% 100%, 0 48%);
+        .imgMain {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -773,4 +773,24 @@ function getImageUrl(urlName) {
   }
 }
 /* End Education Box */
+
+@media (max-width: 680px) {
+  body .landing .rowLanding .colImg:last-child {
+    display: none;
+  }
+
+  body .containBoxUs {
+    padding: 0;
+  }
+  body .imgGl {
+    display: none;
+    height: unset;
+    max-height: max-content;
+  }
+
+  body .containBoxUs .aboutContent .myInfo .inf {
+    flex-direction: column;
+    margin-top: 7px;
+  }
+}
 </style>
