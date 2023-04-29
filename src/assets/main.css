@@ -1,16 +1,14 @@
-
 /* Press Start 2P ( Google Font ) */
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap");
 /* @import url('../assets/fonts/hoog0554.ttf'); */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   /* font-family: cursive, auto; */
-  font-family: 'Electrolize', sans-serif;
+  font-family: "Electrolize", sans-serif;
   /* font-family: 'hoog0554', cursive; */
 }
-
 
 body {
   background-color: var(--body);
@@ -25,6 +23,9 @@ body {
   --spe-color: #26c6da;
 }
 
+.spe_color_alot {
+  color: #a378dc;
+}
 
 /* styling for scrollbar  */
 ::-webkit-scrollbar {
@@ -39,7 +40,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #41464b, #b41699,#ffdf4a);
+  background: linear-gradient(45deg, #41464b, #b41699, #ffdf4a);
 }
 
 /* the h2 of all page  */
@@ -58,29 +59,26 @@ h2 span {
   color: var(--for-word);
 }
 
-
-
-
 /* Go Media Settings  */
 
 @media (max-width: 1280px) {
   body .titling .imgTit {
-      right: 35%;
-      top: -3%;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      animation: none;
+    right: 35%;
+    top: -3%;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: none;
   }
   body .titling .imgTit img {
-      border-radius: 50%;
+    border-radius: 50%;
   }
 
   body .titling .infTit::before {
-      content: unset;
+    content: unset;
   }
   body .titling .infTit {
-      animation: none;
+    animation: none;
   }
 
   /* body header {
@@ -94,30 +92,29 @@ h2 span {
 @media (max-width: 1024px) {
   /* in home part  */
   body .colorMode {
-      width: 35px;
-      height: 35px;
+    width: 35px;
+    height: 35px;
   }
   body .colorMode::before {
-      font-size: 12px;
-      left: -38%;
-      top: -50%;
+    font-size: 12px;
+    left: -38%;
+    top: -50%;
   }
 
   body .containAllAbove .FireBtn {
-      right: 15%;
+    right: 15%;
   }
 
   /* in about us part  */
   body .aboutContent .imgInfo {
-      display: none;
+    display: none;
   }
 
   /* in project part  */
   body .projectsCap .testGrill {
-      justify-content: center;
+    justify-content: center;
   }
 }
-
 
 @media (max-width: 600px) {
 }
@@ -125,25 +122,25 @@ h2 span {
 @media (max-width: 414px) {
   /* Global for all  */
   h2 {
-      font-size: 20px;
-      justify-content: flex-start;
+    font-size: 20px;
+    justify-content: flex-start;
   }
 
   /* in home part  */
   body .titling .infTit {
-      font-size: 12px;
-      max-width: 250px;
+    font-size: 12px;
+    max-width: 250px;
   }
   body .titling .infTit h3 {
-      font-size: 13px;
+    font-size: 13px;
   }
 
   /* in about us part  */
   body .aboutContent .myInfo {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   body .aboutContent .myInfo .imgGl {
-      top: -30px;
+    top: -30px;
   }
 }

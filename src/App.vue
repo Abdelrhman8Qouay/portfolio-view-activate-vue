@@ -1,4 +1,3 @@
-
 <template>
   <v-app id="inspire">
     <v-navigation-drawer
@@ -21,7 +20,7 @@
       <v-list density="compact" nav>
         <v-list-item
           prepend-icon="fas fa-user-secret"
-          color="darken"
+          color="white"
           title="Landing Pro"
           value="landing"
           to="/"
@@ -30,26 +29,37 @@
           prepend-icon="fas fa-project-diagram"
           title="Projects Made"
           value="projects"
-          color="darken"
+          color="white"
           to="projects"
         ></v-list-item>
         <v-list-item
           prepend-icon="fas fa-paper-plane"
           title="Get In Touch"
-          color="darken"
+          color="white"
           value="callme"
           to="getintouch"
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :class="themeColor.bg_main_light">
+    <v-app-bar
+      style="
+        background: linear-gradient(
+          45deg,
+          rgb(206, 145, 187),
+          rgb(255, 189, 162),
+          rgb(250, 250, 250),
+          rgb(255, 189, 162),
+          rgb(203, 143, 189)
+        );
+      "
+    >
       <v-app-bar-nav-icon
-        color="success"
+        color="#9b3d4c"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title :class="themeColor.spe_color"
+      <v-toolbar-title style="color: #9b3d4c"
         >AbdelrhmanQouay's
         <span :class="themeColor.spe_color_alot"
           >Portfolio</span
@@ -78,8 +88,7 @@
           <!--Grid column-->
           <v-col cols="6" md="6" xs="12" class="mb-4 mb-md-0 listCol">
             <h4
-              class="text-uppercase text-xs-h4 text-md-h3"
-              :class="themeColor.spe_color_alot"
+              class="text-uppercase text-xs-h4 text-md-h3 text-primary"
               data-aos="fade-down"
               data-aos-duration="2000"
               style="font-weight: bold"
@@ -159,7 +168,7 @@ const themeColor = ref({
   black_color: "text-black",
 
   spe_color: "text-cyan-lighten-1",
-  spe_color_alot: "text-success",
+  spe_color_alot: "spe_color_alot",
   white_color: "text-white",
 });
 
@@ -243,7 +252,6 @@ library.add([
 ]);
 library.add([faFacebook, faGithub, faTwitter, faLinkedin]);
 </script>
-
 
 <style lang="scss" scoped>
 // Start Window
