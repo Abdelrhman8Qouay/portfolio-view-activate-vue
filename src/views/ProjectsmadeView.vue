@@ -4,8 +4,13 @@
   <div class="projectsCap mb-6">
     <!-- Title Row -->
     <div
-      class="titleContent d-flex flex-md-row flex-sm-column justify-space-between pa-2"
-      :class="themeColor.bg_main_darken"
+      class="titleContent d-flex flex-md-row flex-sm-column justify-space-between"
+      style="
+        background-color: #546e7a;
+        box-shadow: inset 0 0 12px;
+        padding: 9px;
+        border-radius: 10px;
+      "
     >
       <a
         class="btnRepo px-4 py-1 border-double"

@@ -1,4 +1,3 @@
-
 <template>
   <div :class="themeColor.bg_main_darken" class="h-100">
     <!-- Landing Pro start -->
@@ -12,6 +11,7 @@
               prepend-icon="fab fa-twitter"
               max-width="400"
               title="Hi all, I'am Abdelrhman"
+              style="filter: drop-shadow(2px 4px 8px black)"
             >
               <template v-slot:prepend>
                 <v-icon size="x-large"></v-icon>
@@ -289,7 +289,7 @@
               </div>
             </div>
           </div>
-          <div class="movingSkills">
+          <!-- <div class="movingSkills">
             <div class="teckSkill">
               <div class="titleContent pa-2">
                 <h1
@@ -379,7 +379,7 @@
                 <div class="skills" style="width: 0" data-width="1%">0%</div>
               </div>
             </div>
-          </div>
+          </div> -->
         </v-container>
       </div>
       <!-- End Skills  -->
@@ -411,7 +411,7 @@ const themeColor = ref({
   black_color: "text-black",
 
   spe_color: "text-cyan-lighten-1",
-  spe_color_alot: "text-success",
+  spe_color_alot: "spe_color_alot",
   white_color: "text-white",
 });
 
@@ -436,7 +436,6 @@ function getImageUrl(urlName) {
   return new URL(`../${urlName}`, import.meta.url).href;
 }
 </script>
-
 
 <style lang="scss" scoped>
 /* Landing Start */
@@ -548,6 +547,12 @@ function getImageUrl(urlName) {
       max-width: 550px;
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
       padding: 1rem;
+      transform: scale(1.1);
+      transition: 0.4s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+      }
       h3 {
         font-weight: 600;
       }

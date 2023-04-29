@@ -2,11 +2,15 @@
   <!-- Start Contact Touch -->
   <div class="contactTouch">
     <v-container>
-      <div class="pa-2" :class="themeColor.bg_main_darken">
-        <h1
-          class="border-double px-4 py-1 text-center"
-          :class="themeColor.white_color"
-        >
+      <div
+        style="
+          background-color: #546e7a;
+          box-shadow: inset 0 0 12px;
+          padding: 9px;
+          border-radius: 10px;
+        "
+      >
+        <h1 class="border-double px-4 py-1 text-center">
           Get In <span :class="themeColor.spe_color_alot">Touch</span>
         </h1>
       </div>
@@ -86,7 +90,7 @@ const themeColor = ref({
   black_color: "text-black",
 
   spe_color: "text-cyan-lighten-1",
-  spe_color_alot: "text-success",
+  spe_color_alot: "spe_color_alot",
   white_color: "text-white",
 });
 
